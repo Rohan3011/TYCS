@@ -20,7 +20,7 @@ n = len(G)
 # print(n)
 # transform G into markov matrix A
 
-M = csc_matrix(G, dtype=np.float)
+M = csc_matrix(G, dtype=np.float64)
 rsums = np.array(M.sum(1))[:, 0]
 ri, ci = M.nonzero()
 M.data /= rsums[ri]
